@@ -1,0 +1,9 @@
+{
+  "extends": "eslint-config-namchee/tsconfig",
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
