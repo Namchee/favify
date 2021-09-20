@@ -17,9 +17,9 @@ export interface Favicon {
  */
 export interface FetcherConfig {
   // user agent string to be used
-  userAgent?: string;
+  'User-Agent'?: string;
   // referrer to be user
-  referrer?: string;
+  'Referrer'?: string;
 }
 
 /**
