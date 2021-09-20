@@ -15,6 +15,10 @@ export async function fetchFavicons(
   url: string,
   config?: FetcherConfig,
 ): Promise<Favicon[]> {
+  if (!url.match(/^https?:\/\//)) {
+    url = `https://${url}`;
+  }
+
   const response = await fetch(url, {
     method: 'GET',
     headers: {
