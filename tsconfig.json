@@ -2,6 +2,7 @@
   "extends": "eslint-config-namchee/tsconfig",
   "compilerOptions": {
     "outDir": "./dist",
+    "importHelpers": true,
     "declaration": true
   },
   "include": [
