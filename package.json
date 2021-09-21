@@ -1,5 +1,5 @@
 {
-  "name": "favify",
+  "name": "@namchee/favify",
   "version": "0.1.0",
   "description": "Easily fetch all favicons from a webpage",
   "repository": "git@github.com:Namchee/favify.git",
@@ -33,6 +33,7 @@
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
     "ts-jest": "^27.0.5",
+    "tslib": "^2.3.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
@@ -45,7 +46,6 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
-    "node-fetch": "^3.0.0",
-    "tslib": "^2.3.1"
+    "node-fetch": "^3.0.0"
   }
 }
