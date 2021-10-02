@@ -1,3 +1,15 @@
+# v0.1.5 (Sat Oct 02 2021)
+
+#### 🐛 Bug Fix
+
+- fix: Enforce extension on imports so it does not break [#4](https://github.com/Namchee/favify/pull/4) ([@Namchee](https://github.com/Namchee))
+
+#### Authors: 1
+
+- Cristopher ([@Namchee](https://github.com/Namchee))
+
+---
+
 # v0.1.4 (Sat Oct 02 2021)
 
 #### 🐛 Bug Fix
