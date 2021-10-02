@@ -3,3 +3,4 @@
 jest.config.cjs
 prettier.config.js
 .github
+.autorc
