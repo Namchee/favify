@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 import { load } from 'cheerio';
 
-import { getFilenameFromPath, getMIMEType } from './utils';
-import type { Favicon, FetcherConfig, Manifest } from './types';
+import { getFilenameFromPath, getMIMEType } from './utils.js';
+import type { Favicon, FetcherConfig, Manifest } from './types.js';
 
 /**
  * Fetch all functional favicons from a webpage.

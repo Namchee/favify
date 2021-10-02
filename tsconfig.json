@@ -1,6 +1,7 @@
 {
   "extends": "eslint-config-namchee/tsconfig",
   "compilerOptions": {
+    "module": "ES2020",
     "outDir": "./dist",
     "importHelpers": true,
     "declaration": true
