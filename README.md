@@ -14,12 +14,13 @@ Simple library to fetch all favicons from a webpage.
 
 ## Installation
 
-You can install favify with any NodeJS package managers. Below is the example of installing favify with `npm`
+You can install `favify` with any NodeJS package managers. Below is the example of installing `favify` with `npm`
 
 ```bash
 npm install @namchee/favify
 ```
 
+> Note: [favify](https://www.npmjs.com/package/favify) is an old-and-unmaintained version of the library. For the latest version, always use `@namchee/favify`
 ## API
 
 ### fetchFavicons
