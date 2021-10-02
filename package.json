@@ -19,6 +19,8 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@auto-it/conventional-commits": "^10.32.1",
+    "@auto-it/npm": "^10.32.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
@@ -33,8 +35,8 @@
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
     "ts-jest": "^27.0.5",
-    "tslib": "^2.3.1",
     "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
   "engines": {
