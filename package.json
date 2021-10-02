@@ -1,6 +1,6 @@
 {
   "name": "@namchee/favify",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Easily fetch all favicons from a webpage",
   "repository": "git@github.com:Namchee/favify.git",
   "author": {
