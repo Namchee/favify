@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-unfetch';
 import { load } from 'cheerio';
 
 import { getFilenameFromPath, getMIMEType } from './utils.js';
@@ -8,31 +8,33 @@ import type { Favicon, Manifest } from './types.js';
  * Fetch all functional favicons from a webpage.
  *
  * @param {string} url Webpage's URL
- * @param {Headers} headers request headers
+ * @param {Record<string, any>} headers request headers
  * @returns {Promise<Favicon[]>} List of favicons in input webpage
  */
 export async function fetchFavicons(
   url: string,
-  headers?: Headers,
+  headers?: Record<string, unknown>,
 ): Promise<Favicon[]> {
   if (!url.match(/^https?:\/\//)) {
     url = `https://${url}`;
   }
 
-  const head = new Headers(headers);
-  head.set('Accept', 'text/html');
+  const { origin } = new URL(url);
 
   const response = await fetch(url, {
     method: 'GET',
-    headers: head,
+    headers: {
+      ...headers,
+      'Accept': 'text/html',
+    },
+    referrer: 'no-referrer',
   });
 
   const body = await response.text();
-  const { origin } = new URL(url);
 
   return Promise.all([
     getFaviconsFromDocument(body, origin),
-    getFaviconsFromManifest(body, origin, head),
+    getFaviconsFromManifest(body, origin, headers || {}),
   ]).then(res => res.flat());
 }
 
@@ -69,26 +71,28 @@ function getFaviconsFromDocument(body: string, base: string): Favicon[] {
  *
  * @param {string} body document body
  * @param {string} base source URL
- * @param {Headers} headers request header
+ * @param {Record<string, any>} headers request header
  * @returns {Promise<Favicon[]>} list of favicons
  */
 async function getFaviconsFromManifest(
   body: string,
   base: string,
-  headers: Headers,
+  headers: Record<string, unknown>,
 ): Promise<Favicon[]> {
   const dom = load(body);
   const man = dom('link[rel=manifest]');
 
-  if (!man) {
+  if (!man.length) {
     return [];
   }
 
   const name = man.attr('href') as string;
-  headers.set('Accept', 'application/manifest+json');
   const manifest = await fetch(new URL(name, base).toString(), {
     method: 'GET',
-    headers,
+    headers: {
+      ...headers,
+      'Accept': 'application/manifest+json',
+    },
   });
   const { icons } = (await manifest.json()) as Manifest;
 
