@@ -1,3 +1,15 @@
+# v0.2.0 (Sun Oct 03 2021)
+
+#### 🚀 Enhancement
+
+- feat: add isomorphic fetch behavior [#5](https://github.com/Namchee/favify/pull/5) ([@Namchee](https://github.com/Namchee))
+
+#### Authors: 1
+
+- Cristopher ([@Namchee](https://github.com/Namchee))
+
+---
+
 # v0.1.5 (Sat Oct 02 2021)
 
 #### 🐛 Bug Fix
