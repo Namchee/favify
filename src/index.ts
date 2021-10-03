@@ -27,7 +27,7 @@ export async function fetchFavicons(
       ...headers,
       'Accept': 'text/html',
     },
-    referrer: 'no-referrer',
+    redirect: 'follow',
   });
 
   const body = await response.text();
@@ -93,6 +93,7 @@ async function getFaviconsFromManifest(
       ...headers,
       'Accept': 'application/manifest+json',
     },
+    redirect: 'follow',
   });
   const { icons } = (await manifest.json()) as Manifest;
 
