@@ -4,13 +4,16 @@
 
 Simple library to fetch all favicons from a webpage.
 
+> While this library is usable in the browser environment, the library won't bypass the CORS policy.
+
 ## Features
 
 1. 💡 Very simple API
 2. ✨ Supports modern favicon features
-2. 🌐 Parses with Web Manifests
-3. 🛂 Written in TypeScript
-4. 📦 Very compact, 1kB-ish gzipped
+3. 🗺️ Works both in browser and Node
+4. 🌐 Parses with Web Manifests
+5. 🛂 Written in TypeScript
+6. 📦 Very compact, 1kB-ish gzipped
 
 ## Installation
 
