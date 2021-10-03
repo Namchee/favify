@@ -13,16 +13,6 @@ export interface Favicon {
 }
 
 /**
- * Fetcher configuration
- */
-export interface FetcherConfig {
-  // user agent string to be used
-  'User-Agent'?: string;
-  // referrer to be user
-  'Referrer'?: string;
-}
-
-/**
  * Web manifest file definition
  */
 export interface Manifest {
